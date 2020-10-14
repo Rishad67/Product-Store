@@ -1,0 +1,43 @@
+scalar Upload
+
+type category {
+    _id: ID!
+    categoryName: String!
+    numberOfProducts: Int
+}
+
+type product {
+    _id: ID!
+    name: String!
+    brand: String!
+    details: String!
+    image: String!
+    price: Float!
+    category: category!
+}
+
+input categoryInput {
+    categoryName: String!
+}
+
+input productInput {
+    name: String!
+    brand: String!
+    details: String!
+    price: Float!
+    categoryID: ID!
+}
+
+type Query {
+    products(categoryID: String): [product!]!
+    categories: [category!]!
+}
+
+type Mutation {
+    addProduct(productInput: productInput!) : product!
+    deleteProduct(productID: String!) : String
+    updateProduct(productID: String!, productInput: productInput!) : product!
+    addCategory(categoryInput: categoryInput!) : category!
+    deleteCategory(categoryID: String!) : String
+    uploadImage(Image: Upload!): String!
+}

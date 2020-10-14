@@ -1,0 +1,52 @@
+
+mutation {
+  addProduct(productInput:{name: "Fan",brand: "Walton",details:"Cooking essentials",price:1000,categoryID:"5f86f5c8e7ebde341cccc178"}) {
+    _id
+    name
+    brand
+    price
+    details
+    category{
+      _id
+      categoryName
+    }
+  }
+}
+
+mutation {
+  deleteProduct(productID: "5f86f6e5f27576121832558d")
+}
+
+mutation {
+  addCategory(categoryInput:{categoryName:"Electronics"}) {
+    _id
+    categoryName
+    numberOfProducts
+  }
+}
+
+mutation {
+  deleteCategory(categoryID: "5f86f5c8e7ebde341cccc178")
+}
+
+query {
+  products {
+     _id
+    name
+    brand
+    price
+    details
+    category {
+      categoryName
+    }
+  }
+}
+
+query {
+  categories{
+    _id
+    categoryName
+    numberOfProducts
+  }
+}
+
