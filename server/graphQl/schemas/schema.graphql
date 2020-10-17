@@ -25,7 +25,8 @@ input productInput {
     brand: String!
     details: String!
     price: Float!
-    categoryID: ID!
+    categoryID: ID!,
+    image: Upload
 }
 
 type Query {
@@ -39,5 +40,5 @@ type Mutation {
     updateProduct(productID: String!, productInput: productInput!) : product!
     addCategory(categoryInput: categoryInput!) : category!
     deleteCategory(categoryID: String!) : String
-    uploadImage(Image: Upload!): String!
+    uploadImage(image: Upload!): String!
 }

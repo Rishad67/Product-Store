@@ -2,15 +2,14 @@ html,body {
   height: 100%;
 }
 
-#product-section {
-  height: 100%;
-}
-
 .product-box {
-  background-color: rgb(245, 238, 140);
+  background-color: rgb(200, 245, 148);
   padding: 5px;
-  border: 2px solid burlywood;
+  border: 2px solid rgb(211, 221, 207);
   border-radius: 3px;
+  display: flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
 #category-section {
@@ -18,7 +17,6 @@ html,body {
   border: 2px solid burlywood;
   border-radius: 3px;
   margin: 10px;
-  min-height: 100%;
 }
 
 #category-section h1 {

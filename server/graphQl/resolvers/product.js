@@ -27,6 +27,9 @@ const addProduct = async (productInput) => {
             throw new Error('This Category does not exist');
         }
 
+        let imageResource = productInput.image;
+        console.log(imageResource);
+
         let newProduct = new productModel({
             name: productInput.name,
             brand: productInput.brand,
@@ -71,6 +74,9 @@ const updateProduct = async (productID,productInput) => {
         if(!product) {
             throw new Error("Product Not found");
         }
+
+        let imageResource = productInput.image;
+        console.log(imageResource);
 
         product.name = productInput.name,
         product.brand = productInput.brand,

@@ -27,8 +27,8 @@ const Mutation = {
     deleteCategory: async (_,{categoryID}) => {
         return categoryResolver.deleteCategory(categoryID);
     },
-    uploadImage: async (_,{ Image }) => {
-        return imageResolver.uploadImage(Image);
+    uploadImage: async (_,{ image }) => {
+        return imageResolver.uploadImage(image);
     }
 }
 module.exports = {Query,Mutation};
